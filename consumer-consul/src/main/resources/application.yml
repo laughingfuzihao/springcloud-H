@@ -1,0 +1,17 @@
+server:
+ port: 8005
+
+spring:
+  application:
+    name: cloud-pay-consumer #消费服务
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
+
+management:
+  endpoint:
+    health:
+      enabled: true

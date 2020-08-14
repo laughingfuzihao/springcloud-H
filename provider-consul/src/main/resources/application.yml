@@ -1,0 +1,38 @@
+server:
+  port: 9007
+
+spring:
+  application:
+    name: cloud-pay-provider #支付服务提供者
+
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/edu?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: gwssi
+  devtools:
+    restart:
+      #热部署生效
+      enabled: true
+      #设置重启的目录
+      additional-paths: src/main/java
+      #classpath目录下的WEB-INF文件夹内容修改不重启
+      exclude: WEB-INF/**
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  #type-aliases-package: com.laughing.entity
+  type-aliases-package: com.laughing.common.entity
+
+management:
+  endpoint:
+    health:
+      enabled: true
+

@@ -1,0 +1,9 @@
+server:
+ port: 8005
+
+spring:
+  application:
+    name: cloud-pay-consumer-zookeeper #消费服务
+  cloud:
+    zookeeper:
+      connect-string: 49.232.61.212:2181

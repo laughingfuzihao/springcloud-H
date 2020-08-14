@@ -1,0 +1,16 @@
+# Project exclude paths
+/cloud-api-commom/target/
+/config/target/
+/consumer/target/
+/consumer-consul/target/
+/consumer-feign/target/
+/consumer-zookeeper/target/
+/eureka/target/
+/eureka2/target/
+/gateway/target/
+/hystrix-dashboard/target/
+/provider/target/
+/provider2/target/
+/provider-consul/target/
+/provider-hystrix/target/
+/provider-zookeeper/target/

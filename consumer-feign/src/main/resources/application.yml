@@ -1,0 +1,25 @@
+server:
+ port: 8022
+
+spring:
+  application:
+    name: cloud-pay-consumer-feign #消费服务
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://Eureka7001.com:7001/eureka/,http://Eureka7002.com:7002/eureka/
+
+ribbon:
+  # 建立连接时间
+  ReadTimeout: 5000
+  # 读取资源时间
+  ConnectTimeout: 5000
+
+logging:
+  level:
+    # 日志监控的接口 和 级别
+    com.laughing.consumer.service.PayMentService: debug
+feign:
+  hystrix:
+    enabled: true

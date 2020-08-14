@@ -1,0 +1,22 @@
+server:
+  port: 3344
+
+spring:
+  application:
+    name: spring-cloud-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/laughingfuzihao/springcloud-config.git
+          #相对路径
+          search-paths:
+            - config
+          username: laughingfuzihao
+          password: Fzh619426619
+      label: master
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://Eureka7001.com:7001/eureka/,http://Eureka7002.com:7002/eureka/

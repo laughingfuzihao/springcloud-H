@@ -1,0 +1,12 @@
+server:
+ port: 8002
+
+spring:
+  application:
+    name: cloud-pay-consumer #消费服务
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://Eureka7001.com:7001/eureka/,http://Eureka7002.com:7002/eureka/
